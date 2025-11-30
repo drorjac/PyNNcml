@@ -3,12 +3,12 @@ import setuptools
 
 def read_install_requires():
     print("Reading install requirements")
-    return [r.split('\n')[0] for r in open('requirements.txt', 'r').readlines()]
+    return [r.split('\n')[0] for r in open('requirements.txt', 'r', encoding="utf-8").readlines()]
 
 
 def get_log_description():
     print("Reading README File")
-    with open("README.md", "r") as fh:
+    with open("README.md", "r", encoding="utf-8") as fh:
         long_description = fh.read()
     return long_description
 
